@@ -10,7 +10,7 @@
 		#bienvenida	{ border: 1px solid #CCC; margin: 10px; }
 		#message-chat{ margin: 10px; border: 1px solid #CCC; display: none; }
 		#chat{ margin: 10px; border: 1px solid #CCC; display: none; }
-		.lista_mensaje{ height: 400px; }	
+		#lista_mensaje{ height: 400px; }	
 	</style>
 </head>
 <body>
@@ -40,19 +40,19 @@
 				</div>	
 			</div>
 		</div>
-		<div id="message-chat" class="row">
+		<div lass="row">
 			<div class="col-md-4">
-				<div class="row">
+				<div>
 					<p class="search">
 					<span class="glyphicon glyphicon-search"></span><input type="text" name="contact" id="contact" placeholder="Buscar o empezar un chat nuevo ...">
 					</p>
 				</div>
-				<div class="row">
+				<div>
       				<ul id="list_contact" class="list-group"></ul>	
       			</div>
 			</div>
 			<div class="col-md-8">
-				<div class="lista_mensaje">
+				<div id="lista_mensaje">
 					<ul id="lista_mensajes" class="list-group"></ul>
 				</div>
 			</div>
