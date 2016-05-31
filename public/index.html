@@ -27,7 +27,7 @@
 			<input type="text" id="nombre" class="form-control">
 			<button onclick="guardarNombre()">Entrar</button>
 		</div>
-		<div class="row">
+		<div id="message-chat" class="row">
 			<div class="col-md-4">
 				<div class="data_contact">
 					<img class="img_contact img-circle" alt="img_user"> 
@@ -47,8 +47,17 @@
 				</div>	
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-4"></div>
+		<div id="message-chat" class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<p class="search">
+					<span class="glyphicon glyphicon-search"></span><input type="text" name="contact" id="contact" placeholder="Buscar o empezar un chat nuevo ...">
+					</p>
+				</div>
+				<div class="row">
+      				<ul id="list_contact" class="list-group"></ul>	
+      			</div>
+			</div>
 			<div class="col-md-8">
 				<div id="chat" class="well">
 					<input type="text" id="mensaje" class="form-control">
@@ -68,6 +77,7 @@
 		{
 			nombre = $('#nombre').val();
 			$('#bienvenida').hide();
+			$('#message-chat').show();
 			$('#chat').show();
 		}
 
