@@ -7,17 +7,9 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 	<style>
-		#bienvenida
-		{
-			border: 1px solid #CCC;
-			margin: 10px;
-		}
-		#chat
-		{
-			margin: 10px;
-			border: 1px solid #CCC;
-			display: none;
-		}
+		#bienvenida	{ border: 1px solid #CCC; margin: 10px; }
+		#message-chat{ display: none;	}
+		#chat{ margin: 10px; border: 1px solid #CCC; display: none; }
 	</style>
 </head>
 <body>
@@ -59,11 +51,13 @@
       			</div>
 			</div>
 			<div class="col-md-8">
+				<div>
+					<ul id="lista_mensajes" class="list-group"></ul>
+				</div>
 				<div id="chat" class="well">
 					<input type="text" id="mensaje" class="form-control">
-					<button onclick="enviarMensaje()">Enviar mensaje</button>
-					<button onclick="limpiarMensajes()">Limpiar mensajes</button>
-					<ul id="lista_mensajes" class="list-group"></ul>
+					<button onclick="enviarMensaje()"><span class="glyphicon glyphicon-pencil" id="btn-mensaje"></span></button>
+					<button onclick="limpiarMensajes()"><span class="glyphicon glyphicon-trash" id="btn-mensaje"></button>
 				</div>
 			</div>
 		</div>
